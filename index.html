@@ -17,21 +17,49 @@
 
 </head>
 
-<body>
+<body onload="init()">
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <span class="navbar-brand mb-0 h1">QuizApp</span>
         </div>
     </nav>
     <div class="container">
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+        <div class="card quiz-card">
+            <img src="./img/bg b.png" class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 id="questiontext" class="card-title">Frage</h5>
+
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
+                    <div id="answer_1" class="card-body">
+                        Antwort
+                    </div>
+                </div>
+
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_2')">
+                    <div id="answer_2" class="card-body">
+                        Antwort
+                    </div>
+                </div>
+
+
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_3')">
+                    <div id="answer_3" class="card-body">
+                        Antwort
+                    </div>
+                </div>
+
+
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_4')">
+                    <div id="answer_4" class="card-body">
+                        Antwort
+                    </div>
+                </div>
+
+                <div class="question-footer">
+                    <span><b>1</b> von <b id="allQuestions">5</b> Fragen</span>
+                    <button class="btn btn-primary">Nächste Frage</button>
+                </div>
+
             </div>
         </div>
     </div>
